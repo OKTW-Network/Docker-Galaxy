@@ -22,10 +22,10 @@ RUN wget --progress=bar:force "https://maven.modmuss50.me/net/fabricmc/fabric-in
     rm fabric-installer-${FABRIC_INSTALLER}.jar
 
 # Download mods
-## Fabric proxy 1.3.0
+## Fabric proxy
 RUN wget --progress=bar:force --content-disposition -P mods "https://edge.forgecdn.net/files/2845/701/FabricProxy-1.3.0.jar"
-## fabric-language-kotlin 1.3.61+build.2
-RUN wget --progress=bar:force --content-disposition -P mods "https://edge.forgecdn.net/files/2854/324/fabric-language-kotlin-1.3.61+build.2.jar"
+## fabric-language-kotlin
+RUN wget --progress=bar:force --content-disposition -P mods "https://edge.forgecdn.net/files/2924/213/fabric-language-kotlin-1.3.71+build.1.jar"
 
 FROM adoptopenjdk/openjdk14-openj9:alpine-jre
 # Env setup
