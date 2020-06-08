@@ -3,7 +3,7 @@ ARG MCRCON_TAR_FILE=mcrcon-0.0.6-linux-x86-64.tar.gz
 ARG FABRIC_INSTALLER=0.5.2.40
 ARG MINECRAFT_VERSION=1.15.2
 
-FROM adoptopenjdk/openjdk14:alpine-jre as builder
+FROM adoptopenjdk/openjdk14:debianslim-jre as builder
 ARG MCRCON_VERSION
 ARG MCRCON_TAR_FILE
 ARG FABRIC_INSTALLER
@@ -11,7 +11,9 @@ ARG MINECRAFT_VERSION
 WORKDIR /app/minecraft
 COPY app /app
 
-RUN apk add --no-cache wget
+# RUN apk add --no-cache wget
+RUN apt-get update
+RUN apt-get -y install wget
 # Download mcrcon
 RUN wget --progress=bar:force "https://github.com/OKTW-Network/mcrcon/releases/download/${MCRCON_VERSION}/${MCRCON_TAR_FILE}" -O - | tar xz -C /app/control/ mcrcon
 
@@ -31,7 +33,7 @@ RUN wget --progress=bar:force --content-disposition -P mods "https://edge.forgec
 ## lithium
 RUN wget --progress=bar:force --content-disposition -P mods "https://edge.forgecdn.net/files/2904/300/lithium-mc1.15.2-fabric-0.4.6-mod.jar"
 
-FROM adoptopenjdk/openjdk14:alpine-jre
+FROM adoptopenjdk/openjdk14:debianslim-jre
 # Env setup
 ENV PATH="/app/control:${PATH}"
 
