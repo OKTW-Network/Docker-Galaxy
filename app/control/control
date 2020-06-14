@@ -24,7 +24,7 @@ case $1 in
         stop
         ;;
     command)
-        sendCommand "${@:8}"
+        sendCommand "$*"
         ;;
     *)
         echo "Not enough arguments!"
