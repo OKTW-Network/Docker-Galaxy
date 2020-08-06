@@ -23,7 +23,7 @@ RUN wget --progress=bar:force "https://maven.fabricmc.net/net/fabricmc/fabric-in
 
 # Download mods
 ## Fabric API
-RUN wget --progress=bar:force --content-disposition -P mods "https://edge.forgecdn.net/files/2985/289/fabric-api-0.13.1+build.370-1.16.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://edge.forgecdn.net/files/3018/319/fabric-api-0.16.2+build.385-1.16.1.jar"
 ## Fabric proxy
 RUN wget --progress=bar:force --content-disposition -P mods "https://edge.forgecdn.net/files/2987/321/FabricProxy-1.3.3.jar"
 ## phosphor
