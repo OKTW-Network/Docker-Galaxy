@@ -28,10 +28,10 @@ stop)
     stop
     ;;
 op)
-    op "${@:3}"
+    op "${@:2}"
     ;;
 command)
-    sendCommand "${@:8}"
+    sendCommand "${@:2}"
     ;;
 *)
     echo "Not enough arguments!"
