@@ -1,6 +1,6 @@
 #syntax=docker/dockerfile:1
 ARG FABRIC_INSTALLER=0.11.0
-ARG MINECRAFT_VERSION=1.19
+ARG MINECRAFT_VERSION=1.19.1
 
 FROM eclipse-temurin:17-jre-alpine as builder
 ARG MCRCON_VERSION
@@ -24,19 +24,19 @@ RUN wget --progress=bar:force "https://maven.fabricmc.net/net/fabricmc/fabric-in
 ## LazyDFU
 RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar"
 ## Krypton
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/fQEb0iXm/versions/0.2.0/krypton-0.2.0.jar"
+#RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/fQEb0iXm/versions/0.2.0/krypton-0.2.0.jar"
 ## Fabric proxy
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/8dI2tmqs/versions/v2.1.0/FabricProxy-Lite-2.1.0.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/8dI2tmqs/versions/v2.2.0/FabricProxy-Lite-2.2.0.jar"
 ## Starlight
 RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/H8CaAYZC/versions/1.1.1+1.19/starlight-1.1.1%2Bfabric.ae22326.jar"
 ## lithium
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.19-0.8.1/lithium-fabric-mc1.19-0.8.1.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.discordapp.com/attachments/361495932971515904/1002454567943933952/lithium-fabric-mc1.19.1-0.8.2-SNAPSHOT.jar"
 ## FerriteCore
 RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/uXXizFIs/versions/5.0.0-fabric/ferritecore-5.0.0-fabric.jar"
 ## Fabric API
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/P7dR8mSH/versions/0.57.0+1.19/fabric-api-0.57.0%2B1.19.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/P7dR8mSH/versions/0.58.5+1.19.1/fabric-api-0.58.5%2B1.19.1.jar"
 ## Spark
-RUN wget --progress=bar:force --content-disposition -P mods "https://ci.lucko.me/job/spark/322/artifact/spark-fabric/build/libs/spark-1.9.23-fabric.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://ci.lucko.me/job/spark/328/artifact/spark-fabric/build/libs/spark-1.9.29-fabric.jar"
 
 FROM eclipse-temurin:17-jre-alpine
 
