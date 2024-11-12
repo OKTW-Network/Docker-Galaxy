@@ -38,7 +38,7 @@ COPY --from=builder --link /app/control /app/control
 COPY --from=builder --link --chown=1000 /app/minecraft /app/minecraft
 
 # Download datapack
-ADD --chmod=644 https://github.com/OKTW-Network/Easy-Recipe/releases/download/v1.2.0-snapshot/Easy-Recipe.zip /app/minecraft/datapacks/
+ADD --chmod=644 --checksum=sha256:4ded64c078fc778dec196f99c816dd76ab9d83a472b7ec0b8e05a0cdb0489e03 https://github.com/OKTW-Network/Easy-Recipe/releases/download/v1.3.0/Easy-Recipe.zip /app/minecraft/datapacks/
 # Copy config
 COPY --link --chown=1000 config /app/minecraft/config
 # Copy mods
