@@ -17,7 +17,7 @@ RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrint
 ## FerriteCore
 RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/uXXizFIs/versions/a3QXXGz2/ferritecore-7.1.0-hotfix-fabric.jar"
 ## Fabric API
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/P7dR8mSH/versions/MawoBGbv/fabric-api-0.107.3%2B1.21.3.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/P7dR8mSH/versions/kwP1bhmH/fabric-api-0.108.0%2B1.21.3.jar"
 ## Spark
 RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/l6YH9Als/versions/D4nCQOay/spark-1.10.115-fabric.jar"
 
