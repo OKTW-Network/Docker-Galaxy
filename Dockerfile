@@ -15,11 +15,11 @@ RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrint
 ## lithium
 RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/gvQqBUqZ/versions/t1FlWYl9/lithium-fabric-0.14.3%2Bmc1.21.4.jar"
 ## FerriteCore
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/uXXizFIs/versions/a3QXXGz2/ferritecore-7.1.0-hotfix-fabric.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/uXXizFIs/versions/IPM0JlHd/ferritecore-7.1.1-fabric.jar"
 ## Fabric API
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/P7dR8mSH/versions/KEv54FjE/fabric-api-0.111.0%2B1.21.4.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/P7dR8mSH/versions/15ijyoD6/fabric-api-0.113.0%2B1.21.4.jar"
 ## Spark
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/l6YH9Als/versions/EOLRjQgC/spark-1.10.120-fabric.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/l6YH9Als/versions/X2sypdTL/spark-1.10.121-fabric.jar"
 
 # Download minecraft server and install fabric
 RUN wget --progress=bar:force "https://meta.fabricmc.net/v2/versions/loader/1.21.4/0.16.9/1.0.1/server/jar" -O fabric-server-launch.jar && \
@@ -38,7 +38,7 @@ COPY --from=builder --link /app/control /app/control
 COPY --from=builder --link --chown=1000 /app/minecraft /app/minecraft
 
 # Download datapack
-ADD --chmod=644 --checksum=sha256:46c86d87cdc2a15a78cbf3ac7fb41c7c1b095771072fb1f618bee1225ff78f1d https://github.com/OKTW-Network/Easy-Recipe/releases/download/v1.4.0-snapshot/Easy-Recipe.zip /app/minecraft/datapacks/
+ADD --chmod=644 --checksum=sha256:e78f9530b681094472c91f94d9322909a0ae1c8106429f3c538c2392a9702d26 https://github.com/OKTW-Network/Easy-Recipe/releases/download/v1.4.1/Easy-Recipe.zip /app/minecraft/datapacks/
 # Copy config
 COPY --link --chown=1000 config /app/minecraft/config
 # Copy mods
