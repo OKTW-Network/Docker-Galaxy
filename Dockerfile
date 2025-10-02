@@ -19,7 +19,7 @@ RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrint
 ## Fabric API
 RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/P7dR8mSH/versions/rWWImuoz/fabric-api-0.133.14%2B1.21.9.jar"
 ## Spark
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/l6YH9Als/versions/3KCl7Vx0/spark-1.10.142-fabric.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/l6YH9Als/versions/xLX9xUcP/spark-1.10.145-fabric.jar"
 
 # Download minecraft server and install fabric
 RUN wget --progress=bar:force "https://meta.fabricmc.net/v2/versions/loader/1.21.9/0.17.2/1.1.0/server/jar" -O fabric-server-launch.jar && \
