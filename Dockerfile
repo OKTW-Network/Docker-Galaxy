@@ -11,7 +11,7 @@ RUN wget --progress=bar:force "https://github.com/OKTW-Network/mcrcon/releases/d
 ## Krypton
 # RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/fQEb0iXm/versions/neW85eWt/krypton-0.2.9.jar"
 ## Fabric proxy
-# RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/8dI2tmqs/versions/KqB3UA0q/FabricProxy-Lite-2.10.1.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/8dI2tmqs/versions/nR8AIdvx/FabricProxy-Lite-2.11.0.jar"
 ## lithium
 RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/gvQqBUqZ/versions/YxOQ6mdT/lithium-fabric-0.19.0%2Bmc1.21.9.jar"
 ## FerriteCore
