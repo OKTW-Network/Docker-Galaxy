@@ -19,9 +19,9 @@ RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrint
 ## Moonrise
 RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/KOHu7RCS/versions/phZzgzrM/Moonrise-Fabric-0.8.0-beta.1%2B8a82e11.jar"
 ## Fabric API
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/P7dR8mSH/versions/2diTWKwa/fabric-api-0.134.1%2B1.21.10.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/P7dR8mSH/versions/qNm2IWMn/fabric-api-0.135.0%2B1.21.10.jar"
 ## Spark
-RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/l6YH9Als/versions/xLX9xUcP/spark-1.10.145-fabric.jar"
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/l6YH9Als/versions/eqIoLvsF/spark-1.10.152-fabric.jar"
 
 # Download minecraft server and install fabric
 RUN wget --progress=bar:force "https://meta.fabricmc.net/v2/versions/loader/1.21.10/0.17.2/1.1.0/server/jar" -O fabric-server-launch.jar && \
