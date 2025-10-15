@@ -52,4 +52,4 @@ ENV MALLOC_CONF="background_thread:true"
 WORKDIR /app/minecraft
 USER 1000
 EXPOSE 25565
-CMD ["java", "-XX:+UseLargePages", "-XX:+UseTransparentHugePages", "-XX:MaxRAMPercentage=75", "-XX:+UseZGC", "-XX:+ZGenerational", "-XX:ZUncommitDelay=30", "-jar", "fabric-server-launch.jar"]
+CMD ["java", "-XX:+UseLargePages", "-XX:+UseTransparentHugePages", "-XX:MaxRAMPercentage=75", "-XX:+UseZGC", "-XX:+ZGenerational", "-XX:ZUncommitDelay=30", "-XX:ZCollectionIntervalMinor=30", "-XX:ZCollectionIntervalMajor=300", "-jar", "fabric-server-launch.jar"]
