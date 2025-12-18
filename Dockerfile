@@ -1,5 +1,5 @@
 #syntax=docker/dockerfile:1
-FROM eclipse-temurin:21-jre-noble as builder
+FROM eclipse-temurin:25-jre-noble as builder
 WORKDIR /app/minecraft
 COPY --link app /app
 
@@ -27,6 +27,7 @@ RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrint
 RUN wget --progress=bar:force "https://meta.fabricmc.net/v2/versions/loader/1.21.10/0.17.2/1.1.0/server/jar" -O fabric-server-launch.jar && \
     java -jar fabric-server-launch.jar --initSettings
 
+# Minecraft 1.21.11 uses Java 21
 FROM eclipse-temurin:21-jre-noble
 
 # Env setup
