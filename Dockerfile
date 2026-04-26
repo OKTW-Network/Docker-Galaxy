@@ -13,8 +13,10 @@ RUN wget --progress=bar:force "https://github.com/OKTW-Network/mcrcon/releases/d
     chmod +x /app/control/mcrcon
 
 # Download mods
-## Krypton (TODO: waiting for 26.1.2 support)
-#RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar"
+## Krypton
+# SHA512: 14233210283a76f3cf435a3b8ddbcbd65a858d2b1a10b88ff643c0a01486dfd2bf1843bd3456cd4fb86cbb3b06f2dea0c4e663b1976a48e96de16d3b5a707ec9
+RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrinth.com/data/fQEb0iXm/versions/kYAGItyj/krypton-0.3.0.jar" && \
+    echo "14233210283a76f3cf435a3b8ddbcbd65a858d2b1a10b88ff643c0a01486dfd2bf1843bd3456cd4fb86cbb3b06f2dea0c4e663b1976a48e96de16d3b5a707ec9 mods/krypton-0.3.0.jar" | sha512sum -c -
 
 ## Fabric proxy
 # SHA512: b479c3ed1fe83929cad40e5c925ae2702da879b88a0271a24266cd21ecc037953f347cbe61ac7b7334e087544ee2ce5bf1f041fc3e64f50474404ad564c146f7
