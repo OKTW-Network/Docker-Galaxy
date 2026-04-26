@@ -49,7 +49,9 @@ RUN wget --progress=bar:force --content-disposition -P mods "https://cdn.modrint
     echo "e0697663689c5459b7ed92f21d86b0191bbe7f6327ac7e8972ad9f6318ef7a8ca93da3a8495459ee6f1443cadff7656b150ea0efc81f8cf1300c9301483a2fb3 mods/spark-1.10.172-fabric.jar" | sha512sum -c -
 
 # Download minecraft server and install fabric
+# SHA512: 94145b4f79f90786a145d91777d8bd0dbac8a48eb5c72380c4df1b4d523fb756fa9f858e66e64e129253e5ab193becb290985bf5064fe72a78b61ac48074b60c
 RUN wget --progress=bar:force "https://meta.fabricmc.net/v2/versions/loader/26.1.2/0.19.2/1.1.1/server/jar" -O fabric-server-launch.jar && \
+    echo "94145b4f79f90786a145d91777d8bd0dbac8a48eb5c72380c4df1b4d523fb756fa9f858e66e64e129253e5ab193becb290985bf5064fe72a78b61ac48074b60c fabric-server-launch.jar" | sha512sum -c - && \
     java -jar fabric-server-launch.jar --initSettings
 
 FROM eclipse-temurin:25-jre-noble
